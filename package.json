@@ -1,0 +1,12 @@
+{
+  "name": "language-syslog-ng",
+  "version": "0.0.1",
+  "private": false,
+  "description": "syslog-ng configuration file syntax highlighting",
+  "repository": "https://github.com/mitzkia/language-syslog-ng",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}
