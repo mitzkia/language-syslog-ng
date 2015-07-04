@@ -4,13 +4,14 @@ This package provides syntax highlighting for syslog-ng configuration file in At
 
 # How to install
  * The package can be install with the following command
+
 ```bash
 apm install language-syslog-ng
 ```
 
 # Features
 * Yet syntax highlighter can highlight only the following syntax elements.
-    * Top level statements: for example
+* Top level statements: for example
 ```bash
 options
 source
@@ -21,22 +22,26 @@ parser
 destination
 log
 ```
-    * Top level statement names: for example
+
+* Top level statement names: for example
 ```bash
 s_file
 d_net
 ```
-    * Driver statements: for example
+
+* Driver statements: for example
 ```bash
 file
 pipe
 program
 ```
-    * Double quoted strings: for example
+
+* Double quoted strings: for example
 ```bash
 "/tmp/input_file"
 ```
-    * Comments: for example
+
+* Comments: for example
 ```bash
 # source elements
 # destination elements
