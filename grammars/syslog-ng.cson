@@ -3,7 +3,7 @@
 'fileTypes': ['conf']
 'patterns': [
   {
-      'match': '\\s*(@version\\s*|@include\\s*|@define\\s*|@module\\s*|options\\s*|source\\s*|destination\\s*|filter\\s*|parser\\s*|rewrite\\s*|log\\s*)([a-z_]*)'
+      'match': '^[\\s]*(@version|@include|@define|@module|options|source|destination|filter|parser|rewrite|template|log|flags)[\\s|\\(]*([a-z_-]*)'
       'captures':
           '1':
             # Top level statements
@@ -13,24 +13,11 @@
             'name': 'keyword.other.special-method.syslog-ng'
   }
   {
-      'match': '\\s*(amqp|eventlog|file|graphite|internal|logstore|mongodb|network|nodejs|pacct|pipe|program|redis|riemann|smtp|snmp|sql|stomp|sun-stream|syslog|system|systemd-journal|systemd-syslog|unix-dgram|unix-stream|usertty)\\s*\\(\\s*(["_.a-z]*).*'
+      'match': '(amqp|eventlog|file|graphite|internal|logstore|mongodb|network|nodejs|pacct|pipe|program|redis|riemann|smtp|snmp|sql|stomp|sun-stream|syslog|system|systemd-journal|systemd-syslog|unix-dgram|unix-stream|usertty)'
       'captures':
           '1':
             # Driver statements
             'name': 'keyword.control.syslog-ng'
-          '2':
-            # Double quoted string if exist in the same line
-            'name': 'string.quoted.double.syslog-ng'
-  }
-  {
-      'match': '^\\s(source|destination|filter|parser|rewrite|flags)\\s*\\(\\s*(\\w+)\\s*\\)\\;'
-      'captures':
-          '1':
-            # Top level statement which appears in logpath: source(.*)
-            'name': 'keyword.control.syslog-ng'
-          '2':
-           # Top level statement names which appears in logpath: .*(s_file)
-            'name': 'keyword.other.special-method.syslog-ng'
   }
   {
     'match': '^\\s*#.*$'
@@ -41,5 +28,4 @@
     'end': '"'
     'name': 'string.quoted.double.syslog-ng'
   }
-
 ]
