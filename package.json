@@ -1,6 +1,6 @@
 {
   "name": "language-syslog-ng",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "description": "syslog-ng configuration file syntax highlighting",
   "repository": "https://github.com/mitzkia/language-syslog-ng",
